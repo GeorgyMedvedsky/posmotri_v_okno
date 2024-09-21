@@ -57,6 +57,45 @@ ol {
   position: relative;
 }
 
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin: 1px;
+}
+
+.content__card-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: #fff solid 1px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card-title {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .content__video-card {
   display: flex;
   justify-content: space-between;
@@ -66,6 +105,10 @@ ol {
 .content__video-card-thumbnail {
   width: 193px;
   height: 103px;
+}
+
+.content__video-card-description {
+  line-height: 0.9;
 }
 
 .result__video-container {
@@ -98,6 +141,11 @@ ol {
   width: fit-content;
 }
 
+.search-form__label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
@@ -117,11 +165,31 @@ ol {
   min-width: 225px;
 }
 
+.search-form__label:has(:focus-visible) {
+  outline: #fff solid 1px;
+}
+
+.search-form__textfield:focus-visible {
+  outline: none;
+}
+
 .search-form__pseudo-checkbox {
   height: 19px;
   width: 19px;
   border: 1px solid #fff;
-  margin-right: 2px;
+  margin-right: 5px;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 
 .title {
@@ -130,26 +198,6 @@ ol {
   font-weight: 700;
   line-height: 0.94;
   text-transform: uppercase;
-}
-
-.content__accent {
-  color: #545050;
-}
-
-.content__card-link {
-  text-decoration: none;
-  color: #fff;
-}
-
-.content__video-card-title {
-  font-size: 30px;
-  line-height: 1;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.content__video-card-description {
-  line-height: 0.9;
 }
 
 .button {
@@ -164,6 +212,19 @@ ol {
 
 .button:hover {
   cursor: pointer;
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: #fff solid 1px;
 }
 
 .more-button {
